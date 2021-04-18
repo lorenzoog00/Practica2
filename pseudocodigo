@@ -1,0 +1,46 @@
+FUNCIÓN PRINCIPAL ()
+INICIO
+          Op->ENTERO //para ver que opcion desea el usuario
+          l->ENTERO \\numero entre 5 y 100
+          Lista[100] ->REAL
+
+Intro()
+System (“clr”);
+          do
+	INICIO
+         	          Menú(&Op)
+	          IF(Op==1 || Op==2 || Op==3)
+	          INICIO
+                               IF(Op==3)
+                               INICIO
+         	                     FIN
+                               ELSE
+                               INICIO
+                                         Write(“De que tamaño quieres la lista? (entre el 5 y el 100).”|);
+		                 Read(|&l);
+                                         IF(l>=5 && l<=100)
+                                        INICIO
+	                                         IF(Op==1)
+                                                   INICIO
+	                                                   Acendente(Lista[], l);
+	                                         FIN
+                                                   IF (Op==2)
+                                                  INICIO
+	                                                  Decendente(Lista[], l);
+	                                       FIN
+                                      FIN
+                                      ELSE
+                                      INICIO
+                                                 Write(“Por favor ingresar valores entre el 5 y 100” |);
+                                                 getchar()
+                                     FIN
+                            FIN
+                 FIN
+	      ELSE
+                INICIO
+                           Write(“Carácter inválido en menú. Presione enter para regresar”|);
+                           getchar();
+                FIN
+          while(Op!=3);
+ 	FIN
+FIN
