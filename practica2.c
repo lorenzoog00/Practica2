@@ -23,7 +23,7 @@ int main (void)
 	    }
 	  else
 	    {
-	      printf("De que tamaño quieres la lista? (entre el 5 y el 100)./n");
+	      printf("De que tamaño quieres la lista? (entre el 5 y el 100). \n");
 	      scanf("%d", &l);
 	      if(l>=5 && l<=100)
 		{
@@ -38,14 +38,14 @@ int main (void)
 		}
 	      else
 		{
-		  printf("Por favor ingresar valores entre el 5 y 100/n.");
+		  printf("Por favor ingresar valores entre el 5 y 100 \n.");
 		  getchar();
 		}
 	    }
 	}
       else
 	{
-	  printf("Carácter inválido en menú. Presione enter para regresar");
+	  printf("Carácter inválido en menú. Presione enter para regresar \n");
 	  getchar();
 	}
     }
@@ -55,19 +55,24 @@ int main (void)
 
 void Intro()
 {
-  printf("Lorenzo Orozco /n");
+  printf("Lorenzo Orozco \n");
   getchar();
-  printf("El objetivo del programa es demostrar el dominio que tengo sobre los arreglos. /n El programa ordenará de manera acendente o decendente (como lo elijas) un listado de números entre 5 y 100.");
+  printf("El objetivo del programa es demostrar el dominio que tengo sobre los arreglos. /n El programa ordenará de manera acendente o decendente (como lo elijas) un listado de números entre 5 y 100. \n");
   getchar();
 }
 void Menu(int *Op)
 {
+  printf("Este es el menú; si se quiere un listado de manera acendente preciona 1, si se quiere un listado en forma   decendente      favor de precionar 2, si se quiere terminar el programa favor de precionar 3. \n" );
+  scanf("%d",Op);
+
 }
 
 void Acendente(float Lista[],int l)
 {
+  printf("1");
 }
 
 void Decendente(float Lista[], int l)
 {
+  printf("2");
 }
