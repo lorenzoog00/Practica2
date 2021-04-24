@@ -166,5 +166,71 @@ void caso_3a(float Lista[])
 
 void Decendente(float Lista[], int l)
 {
-  printf("2");
-}
+  int  i, j,r, print, h; //i y j son contadores. r es para imprimir la lista de manera apropiada, h es para no modificar la j                                                       
+    float guarda;
+    for(i=0; i<l; i++)
+      {
+	r=i+1;
+	j=i-1;
+	printf("Lista[%d]: \n", r);
+	if(scanf("%f", &Lista[i])!=1)
+	  {
+	    printf("\nPor favor ingresa un numero real\n");
+	  }
+	else
+	  {
+	    guarda=Lista[i];
+	    if(i==0)
+	      {
+		caso_1(Lista, l);
+	      }
+	    else
+	      {
+		if(Lista[j]>=guarda)
+		  {
+		    for(print=0; print<=i; print++)
+		      {
+			printf("%f ", Lista[print]);
+			if(print==i)
+			  {
+			    printf("\n");
+			  }
+		      }
+		  }
+		if(guarda>Lista[j])
+		  {
+		    while(guarda>Lista[j])
+		      {
+			j--;
+		      }
+		    if(j<=0)
+		      {
+			j=0;
+		      }
+		    while(guarda>Lista[j])
+			{
+			  j--;
+			}
+		      for(h=i; h>j; h--)
+			{
+			  Lista[h+1]=Lista[h];
+			}
+		      Lista[j+1]=guarda;
+		      for(print=0; print<=i; print++)
+			{
+			  printf("%f ", Lista[print]);
+			  if(print==i)
+			    {
+			      printf("\n");
+			    }
+			}
+		  }
+	      }
+	  }
+      }		 
+}		  
+		
+	      
+	  
+      
+    
